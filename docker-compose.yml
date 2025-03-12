@@ -56,7 +56,7 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123456
+      - POSTGRES_PASSWORD=${CLIENT_ORDERS_KEY}
       - POSTGRES_DB=ordersdb
     volumes:
       - ./orders-ms/postgres:/var/lib/postgresql/data
